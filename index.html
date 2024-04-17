@@ -5,7 +5,7 @@
     <title>Overwatch Themed Pomodoro Timer Meeting</title>
     <link rel="icon" href="path/to/overwatch_icon.ico">
     <link rel="stylesheet" href="path/to/overwatch_style.css">
-</body>
+</head>
 <body style="background: url('path/to/overwatch_background.jpg');">
     <header>
         <h1>Overwatch Pomodoro Timer Brainstorming</h1>
@@ -17,7 +17,7 @@
             <section>
                 <h3>Heroes Attendance</h3>
                 <ul>
-                    <li><i>Alice Johnson - Mercy</i></li> <!-- Using italics here for emphasis -->
+                    <li><i>Alice Johnson - Mercy</i></li>
                     <li><i>Bob Smith - Reinhardt</i></li>
                     <li><i>Charlie Lee - Tracer</i></li>
                 </ul>
@@ -26,7 +26,7 @@
                 <h3>Mission Agenda</h3>
                 <ol>
                     <li>Review of last week's combat strategies</li>
-                    <li>Discussion on new tactics for the <b>Pomodoro Timer</b></li> <!-- Bold for importance -->
+                    <li>Discussion on new tactics for the <b>Pomodoro Timer</b></li>
                     <li>Assign objectives for the coming week</li>
                 </ol>
             </section>
@@ -37,7 +37,7 @@
             <hr>
             <section>
                 <h3>New Operations</h3>
-                <p>Introduction of potential alliances with <a href="https://third-party-tool.com">third-party time management tools</a>.</p> <!-- Anchor for a link -->
+                <p>Introduction of potential alliances with <a href="https://third-party-tool.com">third-party time management tools</a>.</p>
             </section>
             <section>
                 <h3>Reconnaissance</h3>
@@ -60,35 +60,62 @@
             </section>
         </div>
     </main>
-<footer>
-    <h3>Field Recordings</h3>
-    <audio controls>
-        <source src="GenjiSayingYoshiWhichmeansGreat.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
-    <video controls>
-        <source src="Boostio.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p>For more information or corrections to the mission report, contact the <b>command center</b>.</p> <!-- Bold for emphasis -->
-    <br>
-    <ul>
-        <li><a href="https://www.elevateoverwatch.com/" target="_blank">Visit Elevate Overwatch Strategy Finder</a></li>
-    </ul>
-<br>
-<br>
-<br>
-</footer>
+    <footer>
+        <h3>Field Recordings</h3>
+        <audio controls>
+            <source src="GenjiSayingYoshiWhichmeansGreat.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <video controls>
+            <source src="Boostio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>For more information or corrections to the mission report, contact the <b>command center</b>.</p>
+        <br>
+        <ul>
+            <li><a href="https://www.elevateoverwatch.com/" target="_blank">Visit Elevate Overwatch Strategy Finder</a></li>
+        </ul>
+    </footer>
 
     <aside>
         <form>
             <fieldset>
-                <legend>Debrief Feedback</legend>
-                <label for="name">Call Sign:</label>
-                <input type="text" id="name" name="name">
-                <label for="feedback">Tactical Feedback:</label>
-                <textarea id="feedback" name="feedback"></textarea>
-                <button type="submit">Submit Report</button>
+                <legend>Session Feedback Form</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your call sign">
+
+                <label for="sessionDate">Session Date:</label>
+                <input type="date" id="sessionDate" name="sessionDate">
+
+                <label for="favHero">Favorite Hero:</label>
+                <select id="favHero" name="favHero">
+                    <option value="mercy">Mercy</option>
+                    <option value="reinhardt">Reinhardt</option>
+                    <option value="tracer">Tracer</option>
+                </select>
+
+                <label for="heroSkills">Skills Improvement Needed:</label>
+                <datalist id="heroSkills">
+                    <option value="Healing"></option>
+                    <option value="Damage"></option>
+                    <option value="Tank"></option>
+                </datalist>
+                <input type="text" list="heroSkills" name="skill" placeholder="Type or select a skill">
+
+                <label>Session Enjoyment:</label>
+                <label><input type="radio" name="enjoyment" value="good"> Good</label>
+                <label><input type="radio" name="enjoyment" value="average"> Average</label>
+                <label><input type="radio" name="enjoyment" value="poor"> Poor</label>
+
+                <label for="improvements">Suggested Improvements:</label>
+                <textarea id="improvements" name="improvements"></textarea>
+
+                <label>Additional Features:</label>
+                <label><input type="checkbox" name="features" value="notifications"> Notifications</label>
+                <label><input type="checkbox" name="features" value="reminders"> Reminders</label>
+                <label><input type="checkbox" name="features" value="social_integration"> Social Integration</label>
+
+                <button type="submit">Submit Feedback</button>
             </fieldset>
         </form>
     </aside>
