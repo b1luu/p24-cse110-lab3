@@ -136,7 +136,6 @@ h3.title-box {
     justify-content: space-around; /* Distributes space evenly around items */
     align-items: center; /* Aligns items vertically */
 }
-
 /* Responsive design adjustments */
 /* Responsive adjustments for tablet devices */
 @media (max-width: 768px) {
