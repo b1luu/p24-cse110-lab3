@@ -12,13 +12,10 @@
     --fallback-font-size: 16px; /* Fallback size if the custom property is not supported */
 }
 header {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center-align horizontally */
-    justify-content: center; /* Center-align vertically */
-    height: 100vh; /* Make the header take up the full viewport height */
-    text-align: center; /* Ensure that the text inside is centered as well */
+    text-align: center; 
+    padding: 20px 0; /* Adjust the padding to reduce vertical spacing */
 }
+
 
 /* Use CSS variables with fallback */
 body {
