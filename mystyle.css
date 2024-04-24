@@ -2,7 +2,7 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #808080; /* Grey color */
+    --main-bg-color: #333333; /* Grey color */
     --text-color: #FFFFFF; /* White color */
     --link-color: #ADD8E6; /* Light blue for links to stand out on the grey background */
     --title-font-size: 24px; /* Size for the title fonts */
@@ -12,7 +12,6 @@
 body {
     background-color: var(--main-bg-color); /* Grey background */
     color: var(--text-color); /* White text color */
-    font-family: 'Roboto', sans-serif; /* Apply the 3rd party font throughout the body */
 }
 
 /* Styles for headers to be bigger and bold */
