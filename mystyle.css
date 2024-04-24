@@ -1,8 +1,36 @@
 /* External CSS Styling Sheet for index.html */
 
-/*Change background color*/
-
-body {
-    background: #98FF98; /* This is a light mint green color */
-}
-
+/* Define CSS variables at the root */
+:root {
+    --main-bg-color: #98FF98; /* Mint green color */
+    --paragraph-color: #ff4500; /* Orange color */
+    --link-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  }
+  
+  /* Use the variable with a fallback for the background */
+  body {
+    background-color: var(--main-bg-color, green); /* Fallback to green if the variable is not available */
+    font-family: 'Roboto', sans-serif; /* Apply the 3rd party font throughout the body */
+  }
+  
+  /* Apply variable colors to paragraphs and links */
+  p {
+    color: var(--paragraph-color); /* Use the variable for paragraph color */
+  }
+  
+  a {
+    color: var(--link-color); /* Use the variable for link color */
+  }
+  
+  /* Other styles can go here... */
+  
+  /* Example of a media query */
+  @media (max-width: 600px) {
+    body {
+      background-color: lightblue; /* Changes the background on small screens */
+    }
+  }
+  
+  /* Import the 3rd party font - make sure this is at the top of your CSS file */
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  
