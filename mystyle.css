@@ -33,6 +33,10 @@ body {
     font-size: calc(16px);
 }
 
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
 .title-box {
     border-style: solid; /* shorthand for border-style */
     border-color: #FFFFFF; /* shorthand for border-color */
@@ -54,8 +58,13 @@ body {
     margin-bottom: 20px;
     margin-left: auto;
 }
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Already in your CSS */
+}
 
-
+a[target="_blank"] {
+    background-color: #d8f2e1 
+}
 /* General styles */
 a {
     color: var(--link-color); /* Light blue color for links */
@@ -85,6 +94,25 @@ h2 {
     padding: 1em; /* Adds padding all around */
     border: 1px solid #FFF; /* White border */
     border-radius: 10px; /* Rounded corners */
+}
+.main-section p {
+    color: #ddd; 
+}
+.title-box > ul > li {
+    font-weight: bold; 
+}
+section ~ h3 {
+    margin-top: 30px; 
+}
+h3 + p {
+    font-style: italic; 
+}
+h3.title-box {
+    background-color: #444; 
+}
+
+.main-section h3 {
+    font-size: 1.2em; 
 }
 
 /* Layout with Flexbox */
