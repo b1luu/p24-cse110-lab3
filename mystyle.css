@@ -1,40 +1,27 @@
 /* External CSS Styling Sheet for index.html */
 
+/* Import the 3rd party font */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #2B353C; /* Grey color */
+    --main-bg-color: #2B353C; /* Dark grey color */
     --text-color: #FFFFFF; /* White color */
-    --link-color: #ADD8E6; /* Light blue for links to stand out on the grey background */
+    --link-color: #ADD8E6; /* Light blue for links */
     --title-font-size: 24px; /* Size for the title fonts */
+    --fallback-font-size: 16px; /* Fallback size if the custom property is not supported */
 }
 
-/* Apply the variables for the background and text color */
+/* Use CSS variables with fallback */
 body {
-    background-color: var(--main-bg-color); /* Grey background */
-    color: var(--text-color); /* White text color */
+    background-color: var(--main-bg-color, #333); /* Fallback color is darker grey */
+    color: var(--text-color, black); /* Fallback text color is black */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Styles for headers to be bigger and bold */
-h1, h2, h3 {
-    color: var(--text-color); /* White text color */
-    font-size: var(--title-font-size);
-    font-weight: bold; /* Makes titles bold */
-}
-
-/* Increase the title size specifically for each header type */
-h1 {
-    font-size: calc(var(--title-font-size) * 2); /* Double the size for h1 */
-}
-
-h2 {
-    font-size: calc(var(--title-font-size) * 1.5); /* 1.5 times the size for h2 */
-}
-
-h3 {
-    font-size: calc(var(--title-font-size) * 1.2); /* 1.2 times the size for h3 */
-}
-
-/* Apply variable colors to links */
+/* General styles */
 a {
     color: var(--link-color); /* Light blue color for links */
     text-decoration: none; /* Removes underline from links */
@@ -44,17 +31,39 @@ a:hover {
     text-decoration: underline; /* Underlines links on hover */
 }
 
+h1, h2, h3, p {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Text color using named color */
+h2 {
+    color: orange; /* Using named color */
+}
+
+/* Box Model */
+/* Using shorthand notation for margin and padding */
+.main-section {
+    margin: 20px auto; /* Centers the section */
+    padding: 1em; /* Adds padding all around */
+    border: 1px solid #FFF; /* White border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Layout with Flexbox */
+.main-section {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around items */
+    align-items: center; /* Aligns items vertically */
+}
+
 /* Responsive design adjustments */
-@media (max-width: 600px) {
-    body {
-        background-color: var(--main-bg-color); /* Keeps the background grey on small screens */
-        color: var(--text-color); /* Keeps the text white on small screens */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column; /* Stacks the flex items on small screens */
     }
 
     h1, h2, h3 {
-        font-size: var(--title-font-size); /* Adjusts title size for readability on smaller screens */
+        font-size: var(--fallback-font-size); /* Use fallback font size */
     }
 }
-
-/* Import the 3rd party font */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
