@@ -2,8 +2,8 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #e0fff0; /* Light shade of mint color */
-    --title-color: #333333; /* Dark grey color */
+    --main-bg-color:#000000; /* Light shade of mint color */
+    --title-color: #006400; /* Dark grey color */
     --link-color: #0066cc; /* Shade of blue */
     --title-font-size: 24px; /* Size for the title fonts */
 }
