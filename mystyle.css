@@ -138,7 +138,6 @@ h3.title-box {
 }
 
 /* Responsive design adjustments */
-/* Responsive adjustments for tablet devices */
 @media (max-width: 768px) {
     .main-section {
         /* Already defined to stack items for smaller screens */
