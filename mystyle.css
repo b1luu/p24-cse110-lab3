@@ -111,6 +111,9 @@ h3.title-box {
     background-color: #444; 
 }
 
+.title-box:has(p) {
+    border: 3px solid #ff0; /* Example usage of :has */
+}
 .main-section h3 {
     font-size: 1.2em; 
 }
