@@ -2,15 +2,15 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color:#000000; /* Light shade of mint color */
-    --title-color: #006400; /* Dark grey color */
+    --main-bg-color: #000000; /* Black color */
+    --title-color: #333333; /* Dark grey color */
     --link-color: #0066cc; /* Shade of blue */
     --title-font-size: 24px; /* Size for the title fonts */
 }
 
-/* Apply the variable with a fallback for the background */
+/* Apply the variable for the background */
 body {
-    background-color: var(--main-bg-color); /* Light shade of mint as background */
+    background-color: var(--main-bg-color); /* Black background */
     font-family: 'Roboto', sans-serif; /* Apply the 3rd party font throughout the body */
 }
 
@@ -53,7 +53,7 @@ a:hover {
 /* Responsive design adjustments */
 @media (max-width: 600px) {
     body {
-        background-color: var(--main-bg-color); /* Keeps the background mint on small screens */
+        background-color: var(--main-bg-color); /* Keeps the background black on small screens */
     }
 
     h1, h2, h3 {
