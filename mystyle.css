@@ -2,21 +2,22 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #000000; /* Black color */
-    --title-color: #333333; /* Dark grey color */
-    --link-color: #0066cc; /* Shade of blue */
+    --main-bg-color: #808080; /* Grey color */
+    --text-color: #FFFFFF; /* White color */
+    --link-color: #ADD8E6; /* Light blue for links to stand out on the grey background */
     --title-font-size: 24px; /* Size for the title fonts */
 }
 
-/* Apply the variable for the background */
+/* Apply the variables for the background and text color */
 body {
-    background-color: var(--main-bg-color); /* Black background */
+    background-color: var(--main-bg-color); /* Grey background */
+    color: var(--text-color); /* White text color */
     font-family: 'Roboto', sans-serif; /* Apply the 3rd party font throughout the body */
 }
 
 /* Styles for headers to be bigger and bold */
 h1, h2, h3 {
-    color: var(--title-color);
+    color: var(--text-color); /* White text color */
     font-size: var(--title-font-size);
     font-weight: bold; /* Makes titles bold */
 }
@@ -34,13 +35,9 @@ h3 {
     font-size: calc(var(--title-font-size) * 1.2); /* 1.2 times the size for h3 */
 }
 
-/* Apply variable colors to paragraphs and links */
-p {
-    color: var(--paragraph-color); /* Use the variable for paragraph color */
-}
-
+/* Apply variable colors to links */
 a {
-    color: var(--link-color); /* Use the variable for link color */
+    color: var(--link-color); /* Light blue color for links */
     text-decoration: none; /* Removes underline from links */
 }
 
@@ -48,12 +45,11 @@ a:hover {
     text-decoration: underline; /* Underlines links on hover */
 }
 
-/* Other styles can go here... */
-
 /* Responsive design adjustments */
 @media (max-width: 600px) {
     body {
-        background-color: var(--main-bg-color); /* Keeps the background black on small screens */
+        background-color: var(--main-bg-color); /* Keeps the background grey on small screens */
+        color: var(--text-color); /* Keeps the text white on small screens */
     }
 
     h1, h2, h3 {
