@@ -2,15 +2,36 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #98FF98; /* Mint green color */
-    --paragraph-color: #333333; /* Dark grey color */
-    --link-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+    --main-bg-color: #e0fff0; /* Light shade of mint color */
+    --title-color: #333333; /* Dark grey color */
+    --link-color: #0066cc; /* Shade of blue */
+    --title-font-size: 24px; /* Size for the title fonts */
 }
 
-/* Use the variable with a fallback for the background */
+/* Apply the variable with a fallback for the background */
 body {
-    background-color: var(--main-bg-color, green); /* Fallback to green if the variable is not available */
+    background-color: var(--main-bg-color); /* Light shade of mint as background */
     font-family: 'Roboto', sans-serif; /* Apply the 3rd party font throughout the body */
+}
+
+/* Styles for headers to be bigger and bold */
+h1, h2, h3 {
+    color: var(--title-color);
+    font-size: var(--title-font-size);
+    font-weight: bold; /* Makes titles bold */
+}
+
+/* Increase the title size specifically for each header type */
+h1 {
+    font-size: calc(var(--title-font-size) * 2); /* Double the size for h1 */
+}
+
+h2 {
+    font-size: calc(var(--title-font-size) * 1.5); /* 1.5 times the size for h2 */
+}
+
+h3 {
+    font-size: calc(var(--title-font-size) * 1.2); /* 1.2 times the size for h3 */
 }
 
 /* Apply variable colors to paragraphs and links */
@@ -20,16 +41,25 @@ p {
 
 a {
     color: var(--link-color); /* Use the variable for link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underlines links on hover */
 }
 
 /* Other styles can go here... */
 
-/* Example of a media query */
+/* Responsive design adjustments */
 @media (max-width: 600px) {
     body {
-        background-color: lightblue; /* Changes the background on small screens */
+        background-color: var(--main-bg-color); /* Keeps the background mint on small screens */
+    }
+
+    h1, h2, h3 {
+        font-size: var(--title-font-size); /* Adjusts title size for readability on smaller screens */
     }
 }
 
-/* Import the 3rd party font - make sure this is at the top of your CSS file */
+/* Import the 3rd party font */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
