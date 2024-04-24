@@ -26,6 +26,29 @@ body {
     padding: 0;
 }
 
+.title-box {
+    border-style: solid; /* shorthand for border-style */
+    border-color: #FFFFFF; /* shorthand for border-color */
+    border-width: 2px; /* shorthand for border-width */
+    border-radius: 5px; /* shorthand for border-radius */
+    padding: 10px; /* shorthand for padding on all sides */
+    margin-bottom: 20px; /* shorthand for margin on the bottom only */
+}
+
+/* Using longhand notation for margin and padding */
+.title-box {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+
 /* General styles */
 a {
     color: var(--link-color); /* Light blue color for links */
