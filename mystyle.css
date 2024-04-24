@@ -2,7 +2,7 @@
 
 /* Define CSS variables at the root */
 :root {
-    --main-bg-color: #333333; /* Grey color */
+    --main-bg-color: #000000; /* Grey color */
     --text-color: #FFFFFF; /* White color */
     --link-color: #ADD8E6; /* Light blue for links to stand out on the grey background */
     --title-font-size: 24px; /* Size for the title fonts */
